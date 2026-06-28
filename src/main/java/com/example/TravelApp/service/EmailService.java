@@ -72,7 +72,7 @@ public class EmailService {
     private final JavaMailSender mailSender;
 
     // 💡 මෙතනට ඔයා Brevo එකේ Register වුණු ඇත්තම ඊමේල් එක දාන්න (e.g., travel.genie51@gmail.com වගේ එකක් නම් ඒක)
-    private final String FROM_EMAIL = "hasinduindusara133@gmail.com";
+    private final String FROM_EMAIL = "b0342d001@smtp-brevo.com";
 
     public EmailService(JavaMailSender mailSender) {
         this.mailSender = mailSender;
