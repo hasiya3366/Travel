@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+<!-- <!DOCTYPE html>
 <html xmlns:th="http://www.thymeleaf.org">
 <head>
     <meta charset="UTF-8">
@@ -61,5 +61,199 @@
     </div>
 </div>
 <script src="/js/chatbot.js"></script>
+</body>
+</html> -->
+
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" th:href="@{/css/styles.css}">
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
+    <style>
+        :root {
+            --primary-color: #0f766e; /* Emerald Green */
+            --primary-hover: #0d9488;
+            --bg-color: #f8fafc;
+            --text-dark: #0f172a;
+            --text-muted: #64748b;
+            --card-shadow: 0 10px 30px rgba(15, 118, 110, 0.05), 0 1px 3px rgba(0, 0, 0, 0.02);
+        }
+
+        body {
+            font-family: 'Plus Jakarta Sans', sans-serif;
+            background-color: var(--bg-color);
+            margin: 0;
+            color: var(--text-dark);
+        }
+
+        main.container {
+            max-width: 1000px;
+            margin: 0 auto;
+            padding: 50px 20px;
+        }
+
+        /* Page Heading Section */
+        .page-heading {
+            text-align: center;
+            margin-bottom: 50px;
+        }
+
+        .page-heading h2 {
+            font-size: 2.5rem;
+            font-weight: 700;
+            color: var(--primary-color);
+            margin-bottom: 15px;
+        }
+
+        .page-heading p {
+            font-size: 1.1rem;
+            color: var(--text-muted);
+            max-width: 700px;
+            margin: 0 auto;
+            line-height: 1.6;
+        }
+
+        /* Stats Grid Section */
+        .stats-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 20px;
+            margin-bottom: 50px;
+        }
+
+        .stat-card {
+            background: #ffffff;
+            padding: 30px 20px;
+            border-radius: 20px;
+            text-align: center;
+            border: 1px solid #e2e8f0;
+            box-shadow: var(--card-shadow);
+        }
+
+        .stat-card i {
+            font-size: 2rem;
+            color: var(--primary-color);
+            margin-bottom: 10px;
+        }
+
+        .stat-card h4 {
+            font-size: 2rem;
+            font-weight: 700;
+            margin: 5px 0;
+            color: var(--text-dark);
+        }
+
+        .stat-card p {
+            margin: 0;
+            color: var(--text-muted);
+            font-size: 0.95rem;
+            font-weight: 500;
+        }
+
+        /* Info Card Structure */
+        .content-card {
+            background: #ffffff;
+            padding: 40px;
+            border-radius: 24px;
+            border: 1px solid #e2e8f0;
+            box-shadow: var(--card-shadow);
+            margin-bottom: 40px;
+        }
+
+        .content-card h3 {
+            font-size: 1.6rem;
+            color: var(--primary-color);
+            margin-top: 0;
+            margin-bottom: 20px;
+            font-weight: 700;
+        }
+
+        /* Features List */
+        .features-list {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+        }
+
+        .features-list li {
+            position: relative;
+            padding-left: 30px;
+            margin-bottom: 15px;
+            font-size: 1rem;
+            color: #334155;
+            line-height: 1.5;
+        }
+
+        .features-list li::before {
+            content: "\f00c"; /* FontAwesome check icon */
+            font-family: "Font Awesome 6 Free";
+            font-weight: 900;
+            position: absolute;
+            left: 0;
+            top: 2px;
+            color: #f59e0b; /* Golden Yellow tick */
+            font-size: 1.1rem;
+        }
+    </style>
+</head>
+<body>
+<header class="site-header">
+    <div class="container header-inner">
+        <h1><a th:href="@{/}">TravelApp</a></h1>
+        <nav>
+            <a th:href="@{/}">Home</a>
+            <a th:href="@{/destinations}">Destinations</a>
+            <a th:href="@{/packages}">Packages</a>
+            <a th:href="@{/about}">About</a>
+            <a th:href="@{/contact}">Contact</a>
+            <a th:href="@{/admin}">Admin</a>
+        </nav>
+    </div>
+</header>
+
+<main class="container">
+    <section class="page-heading">
+        <h2>About TravelApp</h2>
+        <p>TravelApp is a modern, fully functional tour booking web application designed to make vacation planning simple and efficient. Our platform allows users to explore beautiful destinations, select premium travel packages, and book trips instantly online.</p>
+    </section>
+
+    <section class="stats-grid">
+        <div class="stat-card">
+            <i class="fa-solid fa-map-location-dot"></i>
+            <h4>15+</h4>
+            <p>Destinations</p>
+        </div>
+        <div class="stat-card">
+            <i class="fa-solid fa-suitcase-rolling"></i>
+            <h4>14+</h4>
+            <p>Active Packages</p>
+        </div>
+        <div class="stat-card">
+            <i class="fa-solid fa-circle-check"></i>
+            <h4>100%</h4>
+            <p>Verified Bookings</p>
+        </div>
+    </section>
+
+    <section class="content-card">
+        <h3>Why Choose TravelApp?</h3>
+        <ul class="features-list">
+            <li><b>Easy Booking & Account Management:</b> Quickly browse through multiple destination packages, create a user account, and safely manage your tour booking history.</li>
+            <li><b>Real Customer Reviews & Ratings:</b> Read honest feedback and view star ratings submitted by our community to find the absolute best travel experiences.</li>
+            <li><b>Live Pre-Travel Information:</b> Get helpful travel overviews, direct location mapping, and summary details about your destinations before scheduling your tour dates.</li>
+        </ul>
+    </section>
+</main>
+
+<footer class="site-footer">
+    <div class="container">
+        <p>© 2026 TravelApp. All Rights Reserved.</p>
+    </div>
+    <div th:replace="fragments :: chatbot"></div>
+</footer>
 </body>
 </html>
